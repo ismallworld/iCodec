@@ -8,6 +8,10 @@ Note: vp8 is default used in this repository, you can change the code to use vp9
 In this example, we just read one image and use this image to show encode and decode process, 
 you can also read video frames in your application. To run encoder and decoder with vp8:
 ```python
+import cv2
+from vpx_codec import VPXCodec
+
+
 # init VPXCodec
 vpx_codec = VPXCodec('./iCodec.so', 1920, 1080)
 
