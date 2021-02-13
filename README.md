@@ -6,7 +6,7 @@ This is python bindings of Google vp8 codec. Developers can use this repository 
 
 ## Example
 In this example, we just read one image and use this image to show encode and decode process, 
-you can also read video frames in your application. To run encoder and decoder with vp8:
+you can also read video frames in your application. if more frames are sent to the encoder, inter prediction will be automatically enabled. To run encoder and decoder with vp8:
 ```python
 import cv2
 from vpx_codec import VPXCodec
