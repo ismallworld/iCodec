@@ -1,0 +1,1 @@
+gcc -shared -fPIC -o iCodec.so -I ./ -I ./include -L lib main.c -lvpx -lm -lpthread
