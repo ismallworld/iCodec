@@ -5,7 +5,7 @@ This is python bindings of Google vp8 codec. Developers can use this repository 
 
 ## Example
 In this example, we just read one image and use this image to show encode and decode process, 
-you can also read video frames in your application. To run **encoder and decoder** with vp8:
+you can also read video frames in your application. To run encoder and decoder with vp8:
 ```python
 # init VPXCodec
 vpx_codec = VPXCodec('./iCodec.so', 1920, 1080)
@@ -29,7 +29,7 @@ bgr_np = vpx_codec.yuv_to_bgr(out_data)
 # save decoded image
 cv2.imwrite('./test_dec.png', bgr_np)
 ```
-See main.py and vpx_codec.py for more information.
+See **main.py** and **vpx_codec.py** for more information.
 
 ## Dependencies
 ```python
