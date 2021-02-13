@@ -13,8 +13,8 @@ def test_yuv():
 
 
 def test_numpy():
-    vpx_codec = VPXCodec('./iCodec.so', 3840, 2160)
-    bgr_np = cv2.imread("./test.jpg")
+    vpx_codec = VPXCodec('./iCodec.so', 1920, 1080)
+    bgr_np = cv2.imread("./test.png")
     yuv_bytes = vpx_codec.bgr_to_yuv(bgr_np)
     encode_data = vpx_codec.encode(yuv_bytes)
     out_data = vpx_codec.decode(encode_data)
