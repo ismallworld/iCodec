@@ -16,10 +16,11 @@ bgr_np = cv2.imread("./test.png")
 # change to yuv format
 yuv_bytes = vpx_codec.bgr_to_yuv(bgr_np)
 
-# encode this frame, if more frames are sent to the encoder, inter prediction will be automatically enabled.
+# encode this frame 
+# if more frames are sent to the encoder, inter prediction will be automatically enabled
 encode_data = vpx_codec.encode(yuv_bytes)
 
-# decode this frame, be sure to use encode_data in order.
+# decode this frame, be sure to use encode_data in order
 out_data = vpx_codec.decode(encode_data)
 
 # change to numpy format
@@ -28,6 +29,7 @@ bgr_np = vpx_codec.yuv_to_bgr(out_data)
 # save decoded image
 cv2.imwrite('./test_dec.png', bgr_np)
 ```
+See main.py and vpx_codec.py for more information.
 
 ## Dependencies
 ```python
