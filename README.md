@@ -2,7 +2,7 @@
 This is python bindings of Google vp8 codec. Developers can use this repository to simplify video codec development.  
 <img src="https://ismallworld.github.io/ismallworld/iCode/iCodec/images/framework_small.png">  
 
-**Note**: **vp8** is default used in this repository, you can change the code to use **vp9** in your application.
+**Note**: **vp8** is used by default in this repository, you can change the code to use **vp9** in your application.
 
 ## Example
 In this example, we just read one image and use this image to show encode and decode process, 
