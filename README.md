@@ -39,5 +39,5 @@ pip install numpy
 ```
 
 ## For professional users
-If you need to change vpx codec, you need to compile the vpx source code to get iCodec.so. Just reference **build_vpx.sh**
+If you need to change vpx codec, you need to compile the vpx source code to get **iCodec.so**. Just reference **build_vpx.sh**
 and **build_lib.sh**. Be sure **-fPIC** is added when compile the source files.
