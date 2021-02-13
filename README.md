@@ -2,3 +2,35 @@
 This is python bindings of Google vp8 codec. Developers can use this repository to simplify video codec development.
 
 ![image](./ref/framework/framework.png)
+
+## Example
+In this example, we just read one image and use this image to show encode and decode process, 
+you can also read video frames in your application. To run **encoder and decoder** with vp8:
+```python
+# init VPXCodec
+vpx_codec = VPXCodec('./iCodec.so', 1920, 1080)
+
+# read image as numpy format
+bgr_np = cv2.imread("./test.png")
+
+# change to yuv format
+yuv_bytes = vpx_codec.bgr_to_yuv(bgr_np)
+
+# encode this frame, if more frames are sent to the encoder, inter prediction will be automatically enabled.
+encode_data = vpx_codec.encode(yuv_bytes)
+
+# decode this frame, be sure to use encode_data in order.
+out_data = vpx_codec.decode(encode_data)
+
+# change to numpy format
+bgr_np = vpx_codec.yuv_to_bgr(out_data)
+
+# save decoded image
+cv2.imwrite('./test_dec.png', bgr_np)
+```
+
+## Dependencies
+```python
+pip install opencv-contrib-python
+pip install numpy
+```
