@@ -1,7 +1,6 @@
 # iCodec
-This is python bindings of Google vp8 codec. Developers can use this repository to simplify video codec development.  
-<img src="https://www.baidu.com/img/PCfb_5bf082d29588c07f842ccde3f97243ea.png">
-![原理图](https://www.baidu.com/img/PCfb_5bf082d29588c07f842ccde3f97243ea.png)
+This is python bindings of Google vp8 codec. Developers can use this repository to simplify video codec development.
+![原理图](./ref/framework/framework.png)
 **Note**: **vp8** is used by default in this repository, you can change the code to use **vp9** in your application.
 
 ## Example
